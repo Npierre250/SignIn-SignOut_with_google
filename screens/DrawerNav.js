@@ -8,7 +8,7 @@ import { FontAwesome5, MaterialCommunityIcons, SimpleLineIcons } from '@expo/vec
 import Calculator from './Calculator';
 import Home from './Home';
 import Contact from './Contact';
-
+import Login from './Login';
 const Tab = createBottomTabNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -103,6 +103,17 @@ function DrawerNav() {
                     ),
                 }}
                 component={Contact}
+            />
+
+            <Drawer.Screen
+                name="Logout"
+                options={{
+                    drawerLabel: 'logout',
+                    drawerIcon: () => (
+                        <MaterialCommunityIcons name="logout" size={22} color="#808080" />
+                    ),
+                }}
+                component={Login}
             />
         </Drawer.Navigator>
     );
